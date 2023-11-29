@@ -52,7 +52,7 @@ def am_pm(heures, minutes, secondes, format_choisi):
 
 def stop(heures, minutes, secondes, choix_stop):
     if choix_stop == (heures, minutes, secondes):
-        pause_reponse = input("L'horloge est suspendue. Voulez-vous continuer ? (oui/non): ")
+        pause_reponse = input("Pause, taper 'oui' pour reprendre): ")
         if pause_reponse.lower() == "oui":
             pass
         elif pause_reponse.lower() == "non":
