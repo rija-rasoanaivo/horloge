@@ -52,18 +52,10 @@ def am_pm(heures, minutes, secondes, format_choisi): #définition de la fonction
 
 def stop(heures, minutes, secondes, choix_stop): #définition de la fonction qui gère ma pause
     if choix_stop == (heures, minutes, secondes): #verifie si l'heure correspond à mon variable 'choix_stop'
-        pause_reponse = input("Pause, taper '+' pour reprendre): ") #si la condition est respecté, l'heure est suspendu et ce message s'affiche
-        if pause_reponse.lower() == "+":
-            pass
-        elif pause_reponse.lower() == "non":
-            print("Horloge suspendue. Veuillez écrire 'reprendre' pour continuer.") #message de suspension
-            while True:
-                reprise = input("Attente de reprise : ") #attente pour reprendre
-                if reprise.lower() == "reprendre":
-                    print("Horloge reprise.") #message de reprise
-                    break #sortie de la boucle
-                else:
-                    print("Commande non reconnue.") #si aucune condition n'est respecté, ce message s'affiche
+        pause_reponse = input("Pause, appuyer sur n'importe quelle touche puis 'entrer' pour reprendre): ") #si la condition est respecté, l'heure est suspendu et ce message s'affiche
+        if pause_reponse.lower() == " ":
+            print("Reprise de l'horloge.")
+  
 
 
 afficher_heure(heure) #enfin j'appel ma fontction pour afficher l'heure en continue
